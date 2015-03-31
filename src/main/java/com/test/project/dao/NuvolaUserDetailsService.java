@@ -1,7 +1,7 @@
 package com.test.project.dao;
 
-import com.nuvola.myproject.server.service.UserService;
-import com.nuvola.myproject.shared.model.User;
+import com.test.project.domain.User;
+import com.test.project.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

@@ -2,8 +2,13 @@ package com.test.project.service;
 
 import com.test.project.domain.User;
 
+import java.util.List;
+
 public interface UserService {
 
-    User getUser(String login);
+    User getUserByUsername(String username);
 
+    List<String> getPermissions(String username);
+
+    Boolean isCurrentUserLoggedIn();
 }
