@@ -19,11 +19,11 @@ import org.springframework.security.web.authentication.www.BasicAuthenticationFi
 //@EnableGlobalMethodSecurity(securedEnabled = true)
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-    @Autowired
-    private UnauthorizedEntryPoint unauthorizedEntryPoint;
+    /*@Autowired
+    private UnauthorizedEntryPoint unauthorizedEntryPoint;*/
 
-    @Autowired
-    private JpaUserDao userDao;
+    /*@Autowired
+    private JpaUserDao userDao;*/
 
     /*@Bean
     UserDao userDao() {
@@ -35,10 +35,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         return new ShaPasswordEncoder();
     }
 
-    @Bean
+    /*@Bean
     AuthenticationTokenProcessingFilter authenticationTokenProcessingFilter() {
         return new AuthenticationTokenProcessingFilter(userDao);
-    }
+    }*/
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
