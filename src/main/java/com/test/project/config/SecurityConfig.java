@@ -1,5 +1,6 @@
 package com.test.project.config;
 
+import com.test.project.dao.user.JpaUserDao;
 import com.test.project.dao.user.UserDao;
 import com.test.project.rest.AuthenticationTokenProcessingFilter;
 import com.test.project.rest.UnauthorizedEntryPoint;
@@ -20,12 +21,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private UnauthorizedEntryPoint unauthorizedEntryPoint;
 
-    @Autowired
-    private UserDao userDao;
+    @Bean
+    UserDao userDao() {
+        return new JpaUserDao();
+    }
 
     @Bean
     AuthenticationTokenProcessingFilter authenticationTokenProcessingFilter() {
-        return new AuthenticationTokenProcessingFilter(userDao);
+        return new AuthenticationTokenProcessingFilter(userDao());
     }
 
     @Override

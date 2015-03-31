@@ -4,6 +4,7 @@ import com.test.project.dao.JpaDao;
 import com.test.project.domain.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.TypedQuery;
@@ -14,6 +15,7 @@ import javax.persistence.criteria.Root;
 import java.util.List;
 
 
+@Repository
 public class JpaUserDao extends JpaDao<User, Long> implements UserDao
 {
 
