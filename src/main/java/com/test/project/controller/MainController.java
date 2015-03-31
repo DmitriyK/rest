@@ -12,7 +12,7 @@ public class MainController {
     @RequestMapping(method = RequestMethod.GET)
     public String start(Model model){
         System.out.println("controller");
-        return "/login";
+        return "login";
     }
 
 }
